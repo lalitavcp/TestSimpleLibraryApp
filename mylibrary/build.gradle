@@ -37,6 +37,24 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
 }
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.lalitavcp'
+            artifactId = 'mylibrary'
+            version = '1.0.10'
+
+            afterEvaluate {
+               // from components.release
+                from components.findByName("release")
+            }
+        }
+    }
+}
+
+
+
 /*
 plugins {
     alias(libs.plugins.androidLibrary)

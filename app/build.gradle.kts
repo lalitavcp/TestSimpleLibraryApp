@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
+    id("maven-publish")
 }
+group = "com.github.lalitavcp"
 
 android {
     namespace = "com.example.testsimplelibraryapp"

@@ -38,9 +38,32 @@ dependencies {
 
 }
 
+
 publishing {
     publications {
-    /*    release(MavenPublication) {
+        aar(MavenPublication) {
+            groupId = 'com.github.lalitavcp'
+            artifactId = 'TestSimpleLibraryApp'
+            version = '1.0.13'
+
+            afterEvaluate {
+                //from components.release
+                from components.findByName('release')
+            }
+        }
+    }
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+}
+/*
+
+publishing {
+    publications {
+    */
+/*    release(MavenPublication) {
             groupId = 'com.github.lalitavcp'
             artifactId = 'TestSimpleLibraryApp'
             version = '1.0.11'
@@ -49,7 +72,8 @@ publishing {
                // from components.release
                 from components.findByName("release")
             }
-        }*/
+        }*//*
+
         aar(MavenPublication) {
             groupId = project.findProperty('group') ?: 'com.github.lalitavcp'
             artifactId = 'TestSimpleLibraryApp'
@@ -62,6 +86,7 @@ publishing {
         }
     }
 }
+*/
 
 
 

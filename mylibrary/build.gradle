@@ -42,7 +42,7 @@ publishing {
     publications {
         release(MavenPublication) {
             groupId = 'com.github.lalitavcp'
-            artifactId = 'mylibrary'
+            artifactId = 'TestSimpleLibraryApp'
             version = '1.0.10'
 
             afterEvaluate {

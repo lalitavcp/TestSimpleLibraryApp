@@ -3,6 +3,3 @@ jdk:
   - openjdk17
 before_install:
   - ./scripts/prepareJitpackEnvironment.sh
-install:
-  - FILE="-Dfile=mylibrary-debug.aar"
-  - mvn install:install-file $FILE -DgroupId=com.github.lalitavcp -DartifactId=mylibrary -Dversion=1.0.19 -Dpackaging=aar -DgeneratePom=true

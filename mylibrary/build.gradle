@@ -44,7 +44,7 @@ publishing {
         aar(MavenPublication) {
             groupId = 'com.github.lalitavcp'
             artifactId = 'mylibrary'
-            version = '1.0.19'
+            version = '1.0.20'
             pom {
                 description = 'First release'
             }
@@ -61,75 +61,3 @@ publishing {
         }
     }
 }
-/*
-
-publishing {
-    publications {
-    */
-/*    release(MavenPublication) {
-            groupId = 'com.github.lalitavcp'
-            artifactId = 'TestSimpleLibraryApp'
-            version = '1.0.11'
-
-            afterEvaluate {
-               // from components.release
-                from components.findByName("release")
-            }
-        }*//*
-
-        aar(MavenPublication) {
-            groupId = project.findProperty('group') ?: 'com.github.lalitavcp'
-            artifactId = 'TestSimpleLibraryApp'
-            version = project.findProperty('version') ?: '1.0.0'
-
-            afterEvaluate {
-                //from components.release
-                from components.findByName('release')
-            }
-        }
-    }
-}
-*/
-
-
-
-/*
-plugins {
-    alias(libs.plugins.androidLibrary)
-}
-
-android {
-    namespace = "com.example.mylibrary"
-    compileSdk = 34
-
-    defaultConfig {
-        minSdk = 34
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-}
-
-dependencies {
-
-    implementation(libs.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-}
-*/

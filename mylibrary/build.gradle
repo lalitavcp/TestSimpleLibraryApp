@@ -44,10 +44,7 @@ publishing {
         aar(MavenPublication) {
             groupId = 'com.github.lalitavcp'
             artifactId = 'mylibrary'
-            version = '1.0.20'
-            pom {
-                description = 'First release'
-            }
+            version = '1.0.21'
 
             afterEvaluate {
                 //from components.release
@@ -55,9 +52,5 @@ publishing {
             }
         }
     }
-    repositories {
-        maven {
-            url "https://jitpack.io"
-        }
-    }
+
 }

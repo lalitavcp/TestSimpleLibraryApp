@@ -44,7 +44,7 @@ publishing {
         aar(MavenPublication) {
             groupId = 'com.github.lalitavcp'
             artifactId = 'mylibrary'
-            version = '1.0.16'
+            version = '1.0.17'
             pom {
                 description = 'First release'
             }
